@@ -100,16 +100,102 @@ console.log(result);
 
 /////////////////////////////////////////////////////////////////////////////////
 
-let john = { name: "John", surname: "Smith", id: 1 };
-let pete = { name: "Pete", surname: "Hunt", id: 2 };
-let mary = { name: "Mary", surname: "Key", id: 3 };
+// let john = { name: "John", surname: "Smith", id: 1 };
+// let pete = { name: "Pete", surname: "Hunt", id: 2 };
+// let mary = { name: "Mary", surname: "Key", id: 3 };
+//
+// let users = [ john, pete, mary ];
+//
+// let usersMapped = users.map(user => ({
+//       fullName: `${user.name} ${user.surname}`,
+//       id: user.id
+// }))
+//
+// console.log( usersMapped[0].id ) // 1
+// console.log( usersMapped[0].fullName ) // John Smith
 
-let users = [ john, pete, mary ];
+/////////////////////////////////////////////////////////////////////////////////
 
-let usersMapped = users.map(user => ({
-      fullName: `${user.name} ${user.surname}`,
-      id: user.id
-}))
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+//
+// let arr = [ pete, john, mary ];
+//
+// function sortByAge(users) {
+//   users.sort((a, b) => a.age - b.age);
+// }
+//
+// sortByAge(arr);
+//
+// // now: [john, mary, pete]
+// console.log(arr[0].name); // John
+// console.log(arr[1].name); // Mary
+// console.log(arr[2].name); // Pete
 
-console.log( usersMapped[0].id ) // 1
-console.log( usersMapped[0].fullName ) // John Smith
+/////////////////////////////////////////////////////////////////////////////////
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+let arr = [ john, pete, mary ];
+
+// function getAverageAge(users) {
+//   return users.reduce((total, user) => total + user.age, 0) / users.length;
+// }
+
+function getAverageAge(users) {
+  let total = 0;
+  users.forEach(user => total += user.age);
+  return total / users.length;
+}
+
+console.log(getAverageAge(arr)); // (25 + 30 + 29) / 3 = 28
+
+/////////////////////////////////////////////////////////////////////////////////
+
+function unique(arr) {
+  let result = [];
+
+  for (let name of arr) {
+    if (!result.includes(name)) {
+      result.push(name);
+    }
+  }
+
+  return result;
+}
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+console.log(unique(strings)); // Hare, Krishna, :-O
+
+/////////////////////////////////////////////////////////////////////////////////
+
+let users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+function groupById(array) {
+  return array.reduce((obj, value) => {
+    obj[value.id] = value;
+    return obj;
+  }, {})
+}
+
+let usersById = groupById(users);
+
+/*
+// after the call we should have:
+
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+*/
