@@ -14,7 +14,10 @@
   <body>
   <div class="container">
     <section class="side-bar">
-      <div class="logo"></div>
+      <div class="logo-container">
+        <img class="logo-image" src="./src/odin-lined.png" alt="ODIN">
+        <div>ODIN</div>
+      </div>
     </section>
 
     <section class="content">
@@ -28,49 +31,46 @@
         <p>You <em>know</em> you want to.</p>
       </div>
       <div class="form-container">
-        <h1>Let's do this!</h1>
-        <form>
+        <h2>Let's do this!</h2>
+        <form id="account">
           <div class="field-container">
 
             <div class="field">
               <label for="first-name">FIRST NAME</label>
-              <input type="text" id="first-name">
+              <input type="text" id="first-name" autocomplete="off" required>
             </div>
 
             <div class="field">
               <label for="email">EMAIL</label>
-              <input type="text" id="email">
+              <input type="text" id="email" autocomplete="off" required>
             </div>
 
             <div class="field">
               <label for="password">PASSWORD</label>
-              <input type="text" id="password">
+              <input type="text" id="password" autocomplete="off" required>
             </div>
 
             <div class="field">
               <label for="last-name">LAST NAME</label>
-              <input type="text" id="last-name">
+              <input type="text" id="last-name" autocomplete="off" required>
             </div>
-
-
 
             <div class="field">
               <label for="phone-number">PHONE NUMBER</label>
-              <input type="text" id="phone-number">
+              <input type="text" id="phone-number" autocomplete="off" required>
             </div>
-
-
 
             <div class="field">
               <label for="confirm-password">CONFIRM PASSWORD</label>
-              <input type="text" id="confirm-password">
+              <input type="text" id="confirm-password" autocomplete="off" required>
             </div>
 
           </div>
         </form>
       </div>
       <div class="account">
-        <button>Create Account</button>
+        <button type="submit" form="account">Create Account</button>
+        <p>Already have an account? <a href="/">Log in</a></p>
       </div>
     </section>
   </div>

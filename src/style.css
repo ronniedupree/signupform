@@ -1,4 +1,9 @@
 @import url("reset.css");
+@font-face {
+    font-family: 'Norse';
+    src: url(./Norse-Bold.otf);
+}
+
 * {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -9,6 +14,7 @@ html, body {
     display: flex;
     justify-content: center;
     margin: auto;
+    background: #131313;
 }
 
 .container {
@@ -17,12 +23,36 @@ html, body {
     display: flex;
 }
 
-section.side-bar {
-    background: antiquewhite;
+.side-bar {
+    background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962);
+    background-size: cover;
     flex: 3;
 }
 
-section.content {
+.logo-container {
+    display: flex;
+    height: 140px;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 14rem;
+    justify-content: center;
+}
+
+.logo-container > div {
+    font-family: 'Norse', serif;
+    font-size: 6em;
+    color: white;
+    overflow: hidden;
+    line-height: 1;
+    margin: auto 0;
+}
+
+.logo-image {
+    height: 100%;
+}
+
+.content {
     display: flex;
     flex-direction: column;
     flex: 5;
@@ -30,7 +60,7 @@ section.content {
 
 .message {
     display: flex;
-    background: #e7fad7;
+    background: #fafafa;
     flex: 5;
     padding: 3rem;
     flex-direction: column;
@@ -48,11 +78,18 @@ p {
 }
 
 .form-container {
-    padding: 1rem 12rem 1rem 2rem;
-    background: #d7faee;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1rem 13rem 0 3rem;
+    background: #ffffff;
     flex: 5;
     box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.2);
     z-index: 999;
+}
+
+.form-container > * {
+    color: #444456;
+    margin-bottom: 1rem;
 }
 
 .field-container {
@@ -61,27 +98,62 @@ p {
 }
 
 .field {
-    padding: .5rem;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
 }
 
 input {
-    width: 85%;
+    width: 80%;
     height: 30px;
-    border-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.1);
     border-width: 1px;
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 0 8px 0 8px;
 }
 
+input:user-invalid {
+    outline: none;
+    box-shadow: 0 0 1px 1px rgb(255, 83, 83);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 1px 1px rgba(83, 83, 255, 1), 2px 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
 label {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     letter-spacing: 2px;
 }
 
 .account {
-    background: #d7d8fa;
+    background: #fafafa;
     flex: 6;
+    padding: 2rem 13rem 0 3rem;
+}
+
+.account > button {
+    width: 14rem;
+    height: 3rem;
+    background: #596D48;
+    border: none;
+    border-radius: 6px;
+    padding: 0 8px 0 8px;
+    color: white;
+}
+
+.account > p {
+    padding-top: 2rem;
+    font-size: 16px;
+}
+
+a {
+    color: #596D48;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #596D48;
 }
