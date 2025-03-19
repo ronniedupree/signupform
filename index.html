@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/src/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>sign up form</title>
   </head>
   <body>
@@ -13,8 +18,57 @@
     </section>
 
     <section class="content">
-      <div class="message"></div>
-      <div class="form-container"></div>
+      <div class="message">
+        <p>
+          This is not a real online service! You know you need something
+          like this in your life to help you realize your deepest dreams.
+          <br />
+          Sign up <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <div class="form-container">
+        <h1>Let's do this!</h1>
+        <form>
+          <div class="field-container">
+
+            <div class="field">
+              <label for="first-name">FIRST NAME</label>
+              <input type="text" id="first-name">
+            </div>
+
+            <div class="field">
+              <label for="email">EMAIL</label>
+              <input type="text" id="email">
+            </div>
+
+            <div class="field">
+              <label for="password">PASSWORD</label>
+              <input type="text" id="password">
+            </div>
+
+            <div class="field">
+              <label for="last-name">LAST NAME</label>
+              <input type="text" id="last-name">
+            </div>
+
+
+
+            <div class="field">
+              <label for="phone-number">PHONE NUMBER</label>
+              <input type="text" id="phone-number">
+            </div>
+
+
+
+            <div class="field">
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <input type="text" id="confirm-password">
+            </div>
+
+          </div>
+        </form>
+      </div>
       <div class="account">
         <button>Create Account</button>
       </div>

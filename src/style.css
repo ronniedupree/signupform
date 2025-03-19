@@ -1,4 +1,8 @@
 @import url("reset.css");
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
 
 html, body {
     height: 100%;
@@ -20,18 +24,61 @@ section.side-bar {
 
 section.content {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     flex: 5;
 }
 
 .message {
+    display: flex;
     background: #e7fad7;
-    flex: 6;
+    flex: 5;
+    padding: 3rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 24px;
+    width: 90%;
+}
+
+.message > p:nth-child(2) {
+    margin-top: 2rem;
 }
 
 .form-container {
+    padding: 1rem 12rem 1rem 2rem;
     background: #d7faee;
     flex: 5;
+    box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.field-container {
+    margin-top: 1rem;
+    columns: 2;
+}
+
+.field {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 85%;
+    height: 30px;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 0 8px 0 8px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 .account {
