@@ -1,0 +1,40 @@
+@import url("reset.css");
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.container {
+    height: inherit;
+    width: 1400px;
+    display: flex;
+}
+
+section.side-bar {
+    background: antiquewhite;
+    flex: 3;
+}
+
+section.content {
+    display: flex;
+    flex-flow: column;
+    flex: 5;
+}
+
+.message {
+    background: #e7fad7;
+    flex: 6;
+}
+
+.form-container {
+    background: #d7faee;
+    flex: 5;
+}
+
+.account {
+    background: #d7d8fa;
+    flex: 6;
+}
